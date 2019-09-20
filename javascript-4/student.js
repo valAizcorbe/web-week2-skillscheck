@@ -43,13 +43,13 @@ let homeTown = me.homeTown;
 // Next, create a for loop to loop over the array. If any of the colors you chose is 'blue', change it's value to '#4D4DFF' which is just a more appealing color of blue. Outside of the for loop but still inside of setColor, invoke the function called background which will take in three arguments. These arguments should be each item of your array. This is a function we created for you to set the background colors.
 
 function setColor (arr){
-    faveColors.splice(0,3)
-    for(i = 0; i < faveColors.length; i++){
-        if (faveColors === 'blue'){
-            console.log(faveColors[i] ='#4D4DFF')
+    arr.splice(0,3)
+    for(i = 0; i < arr.length; i++){
+        if (arr[i] === 'blue'){
+            console.log(arr[i] ='#4D4DFF')
         }
     }
-    background(faveColors)
+    background(arr)
 }
 
 
@@ -64,6 +64,8 @@ function setPowers (arr){
 
 //////////////////Step 6////////////////////
 //Lastly, create a function called redactInfo that will take in an obj as a paramter. Let's imagine our super hero needs to go undercover and we need to remove all info about them. That is what this function will do. Loop over the object and change each keys value to 'redacted'. Outside of the loop but still in the redactInfo function, run the function redacted() which is a function we created that will update the text on the screen.
+
+
 
 function redactInfo (obj){
     for(obj in key){

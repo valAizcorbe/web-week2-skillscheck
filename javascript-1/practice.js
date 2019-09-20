@@ -153,8 +153,8 @@ let total = myNumbers.reduce((total,current) => {
 
 let myNumbersIndex = []
 
-myNumbers.forEach((index) => {
-	myNumbersIndex.push(index)
+myNumbers.forEach(function(index) {
+	return myNumbersIndex.push(index)
 })
 
 
@@ -164,11 +164,9 @@ myNumbers.forEach((index) => {
 const notGeorge = ['Louis', 'Ted', 'Bill', 'Sharon', 'Mark', 'Angela']
 
 
-// let forTheLoveOfGeorge = notGeorge.map((element) => {
-// 	if (element !=== 'George'){
-// 		return element = 'George'
-// 	}
-// })
+let forTheLoveOfGeorge = notGeorge.map((element) => {
+		return element = 'George'
+})
 
 //////////////////PROBLEM 19////////////////////
 
@@ -182,18 +180,16 @@ const people = [
 	{ name: 'George', friend: true, awesomeLevel: 7 }
 ]
 
-// let enemies = people.filter((friend) => {
-// 	if(people.friend !== true){
-// 	return enemies.push(people.friend)
-// 	}
-// })
-
+let enemies = people.filter(function(element){
+	element.friend === false;
+	} )
+console.log(enemies)
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
-// let totallyAwesome = (people) => 
-// 	people.awesomeLevel.reduce((sum, people) => {
-// 		return sum + people.awesomeLevel
-// 	}, 0)
+let totallyAwesome = people.reduce(function(sum, element) {
+	return sum + element.awesomeLevel
+},0)
+	
