@@ -92,25 +92,29 @@ let me = {
 
 // Create a function called 'bigOrSmall' that takes in one parameter, arr. Create a new array inside of bigOrSmall called 'answers'. Loop over the passed in arr param. If the number is GREATER than 100, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function
 
-// function bigOrSmall(arr){
-// 	let answers = []
-// 	if (arr > 100){
+function bigOrSmall(arr){
+	let answers = []
+	for(let i = 0; i < arr.length; i++){
+	if (arr[i]>= 100){
+		answers.push(arr[i])
+	}
+	}
+	return answers
+}
 
-// 	}
-// }
 
 //////////////////PROBLEM 13////////////////////
 
 // Create a function called 'arrayReverser' that takes in one parameter, arr. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array in reverse and add each item to the new reversed array. Finally, return the new reversed array
 
-//Code Here
-// function arrayReverser (arr){
-// 	let reversed = []
-// 	for (i = arr.length; i < 0; i--){
-// 		return reversed.push(arr[i])
-// 	}
-// }
-// return reversed
+function arrayReverser (arr){
+	let reversed = []
+	for (let i = arr.length - 1; i >= 0; i--){
+		reversed.push(arr[i])
+	}
+	return reversed
+}
+
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
 // Below is an array, myNumbers. We will be using .map, .filter, .reduce and .forEach to manipulate the array in some form
@@ -147,11 +151,11 @@ let total = myNumbers.reduce((total,current) => {
 
 // Last, lets use .forEach to find the index of each item in the array. First, create an empty array called myNumbersIndex. Next, using forEach, push each items index from the myNumbers array to the myNumbersIndex array
 
-// let myNumbersIndex = []
+let myNumbersIndex = []
 
-// myNumbers.forEach((index) => {
-// 	return myNumbersIndex.push(index)
-// })
+myNumbers.forEach((index) => {
+	myNumbersIndex.push(index)
+})
 
 
 //////////////////PROBLEM 18////////////////////
@@ -178,17 +182,18 @@ const people = [
 	{ name: 'George', friend: true, awesomeLevel: 7 }
 ]
 
-let enemies = people.filter((friend) => {
-	if(friend !== true){
-		return people.friend
-	}
-})
-
+// let enemies = people.filter((friend) => {
+// 	if(people.friend !== true){
+// 	return enemies.push(people.friend)
+// 	}
+// })
 
 
 //////////////////PROBLEM 20////////////////////
 
 // Using the people array above, let's get a total of the awesomeLevel from all the people. Call the new array 'totallyAwesome'. Use .reduce()
 
-let totallyAwesome = (obj, filter,filterValue) => 
-{}
+// let totallyAwesome = (people) => 
+// 	people.awesomeLevel.reduce((sum, people) => {
+// 		return sum + people.awesomeLevel
+// 	}, 0)
